@@ -2,11 +2,12 @@
 @import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 @import url('https://fonts.cdnfonts.com/css/asciid');
+@import url("https://refact0r.github.io/system24/build/system24.css")
 
 body {
     /* font, change to '' for default discord font */
-    --font: 'DM Mono'; /* change to '' for default discord font */
-    --code-font: 'DM Mono'; /* change to '' for default discord font */
+    /*--font: 'DM Mono'; /* change to '' for default discord font */
+    /*--code-font: 'DM Mono'; /* change to '' for default discord font */
     font-weight: 300; /* text font weight. 300 is light, 400 is normal. DOES NOT AFFECT BOLD TEXT */
     letter-spacing: -0.05ch; /* decreases letter spacing for better readability. recommended on monospace fonts.*/
 
@@ -73,6 +74,9 @@ body {
 
 /* color options */
 :root {
+    --font-primary: "Terminus", "xos4 Terminus", "Terminus (TTF)", "Fira Code", monospace !important;
+    --font-display: var(--font-primary);
+    --font-headline: var(--font-primary);
     --colors: on; /* off: discord default colors, on: midnight custom colors */
 
     /* text colors */
@@ -545,5 +549,9 @@ body {
     ::-webkit-scrollbar-thumb {
         border-radius: 0 !important;
     }
+}
+
+* {
+  font-family: var(--font-primary) !important;
 }
 
